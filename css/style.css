@@ -59,3 +59,31 @@ main{
   textarea::placeholder{
     color: #54759e;
   }
+
+  .text-aviso {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 30px;
+    margin-top: 1em;
+    padding: 5px 20px;
+    background: #fff3cd;
+    border-radius: 30px;
+    border: 2px solid #ffe084;
+  }
+
+  .img-admiracion {
+    height: 16px;
+    width: 16px;
+  }
+
+  .text-descripcion {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+  }
