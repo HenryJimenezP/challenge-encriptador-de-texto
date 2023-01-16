@@ -160,3 +160,29 @@ main{
 .oculto{
     display: none;
 }
+
+.boton-copy button{
+    width: 80%;
+    height: 40px;
+    border-radius: 24px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100%;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 3em;
+  }
+
+.copiar{
+    background: #239B56;
+    border: none;
+    color: #ffffff;
+  }
+
+.copiar:hover{
+    border: 2px solid #186A3B;
+    background: #58D68D;
+    color: #000000;
+    transition: 1s all;
+}
