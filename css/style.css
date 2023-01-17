@@ -264,3 +264,58 @@ footer{
   color: white;
   text-align: center;
 }
+
+@media (max-width: 992px){
+
+  main{
+      display: flex;
+      flex-direction: column;
+      margin: 0 2em;
+  }
+
+  main .container{
+      max-width: 960px;
+  }
+
+  .contenido-izquierdo{
+      width: 96%;
+  }
+
+  .caja-mensaje textarea, .caja-resultado textarea{
+    height: 300px;
+  }
+  
+  .botones{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .botones button{
+    width: 60%;
+  }
+  
+
+  .contenido-derecho{
+      width: 96%;
+      height: 300px;
+      margin-top: 230px;
+  }
+
+
+  .cont-info img{
+      display: none;
+  }
+
+  footer{
+    margin-top: 10em;
+  }
+}
+
+@media (max-width: 768){
+
+  main .container{
+      max-width: 720px;
+  }
+
+}
