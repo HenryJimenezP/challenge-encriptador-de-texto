@@ -6,6 +6,15 @@ const buttonCopiar = document.getElementById('btnCopiar');
 var mostrar = document.getElementById('mostrar');
 var ocultar = document.getElementById('ocultar');
 
+function msjInfo(){
+    Swal.fire({
+        icon: 'info',
+        title: 'Oops...',
+        text: 'No se permiten caracteres especiales, ni MAYUSCULAS'
+    });
+}
+
+// Encriptar
 function encriptar() {
     var encriptarMensaje = textareaMensaje.value
     .replaceAll('e', 'enter')
@@ -32,7 +41,7 @@ function msjEncriptar(){
             
         }
         else{
-            alert("No se permiten caracteres especiales, ni MAYUSCULAS");
+            msjInfo();
             textareaMensaje.value = '';
             mostrar.className = 'oculto';
             ocultar.className = 'cont-info';
@@ -69,7 +78,7 @@ function msjDesencriptar(){
             
         }
         else{
-            alert("No se permiten caracteres especiales, ni MAYUSCULAS");
+            msjInfo();
             textareaMensaje.value = '';
             mostrar.className = 'oculto';
             ocultar.className = 'cont-info';
