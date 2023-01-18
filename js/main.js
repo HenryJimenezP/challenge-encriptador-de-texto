@@ -55,3 +55,25 @@ function desencriptar() {
     textareaResultado.innerText = desencriptarMensaje;
     
 }
+
+function msjDesencriptar(){
+
+    if(textareaMensaje.value === ""){
+        alert("Favor de escribir al menos una palabra");
+        mostrar.className = 'oculto';
+        ocultar.className = 'cont-info';
+    }else if(textareaMensaje.value.match(/^[a-z ]*$/)) {
+            desencriptar();
+            mostrar.className = 'activo';
+            ocultar.className = 'oculto';
+            
+        }
+        else{
+            alert("No se permiten caracteres especiales, ni MAYUSCULAS");
+            textareaMensaje.value = '';
+            mostrar.className = 'oculto';
+            ocultar.className = 'cont-info';
+        }
+}
+
+buttonDesencriptar.onclick = msjDesencriptar;
