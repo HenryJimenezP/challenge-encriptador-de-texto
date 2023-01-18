@@ -40,3 +40,18 @@ function msjEncriptar(){
 }
 
 buttonEncriptar.onclick = msjEncriptar;
+
+// Desencriptar
+function desencriptar() {
+    var desencriptarMensaje = textareaMensaje.value
+
+    .replaceAll('enter', 'e')
+    .replaceAll('imes', 'i')
+    .replaceAll('ai', 'a')
+    .replaceAll('ober', 'o')
+    .replaceAll('ufat', 'u');
+
+    textareaResultado.getElementById = 'textareaResultado';
+    textareaResultado.innerText = desencriptarMensaje;
+    
+}
