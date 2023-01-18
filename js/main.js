@@ -77,3 +77,15 @@ function msjDesencriptar(){
 }
 
 buttonDesencriptar.onclick = msjDesencriptar;
+
+// Copiar
+function copiarTexto(){
+    var copiarResultado = document.getElementById('textareaResultado').value;
+    
+    navigator.clipboard.writeText(copiarResultado).then(() =>{
+        textareaMensaje.value = '';
+        alert("Texto copiado con exito");
+    })
+}
+
+buttonCopiar.onclick = copiarTexto;
