@@ -9,8 +9,16 @@ var ocultar = document.getElementById('ocultar');
 function msjInfo(){
     Swal.fire({
         icon: 'info',
-        title: 'Oops...',
+        title: 'Lo sentimos',
         text: 'No se permiten caracteres especiales, ni MAYUSCULAS'
+    });
+}
+
+function msjError(){
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Campo vacio, favor de escribir al menos una palabra'
     });
 }
 
