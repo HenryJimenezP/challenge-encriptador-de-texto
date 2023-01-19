@@ -22,6 +22,18 @@ function msjError(){
     });
 }
 
+function copyAprobado(){
+    Swal.fire({
+        toast: true,
+        position: 'top-end',
+        icon: 'success',  
+        title: 'Texto copiado con exito',
+        showConfirmButton: false,
+        timer: 1500,
+        timerProgressBar: true
+    });
+}
+
 // Encriptar
 function encriptar() {
     var encriptarMensaje = textareaMensaje.value
@@ -39,7 +51,7 @@ function encriptar() {
 function msjEncriptar(){
 
     if(textareaMensaje.value === ""){
-        alert("Favor de escribir al menos una palabra");
+        msjError();
         mostrar.className = 'oculto';
         ocultar.className = 'cont-info';
     }else if(textareaMensaje.value.match(/^[a-z ]*$/)) {
@@ -76,7 +88,7 @@ function desencriptar() {
 function msjDesencriptar(){
 
     if(textareaMensaje.value === ""){
-        alert("Favor de escribir al menos una palabra");
+        msjError();
         mostrar.className = 'oculto';
         ocultar.className = 'cont-info';
     }else if(textareaMensaje.value.match(/^[a-z ]*$/)) {
@@ -101,7 +113,7 @@ function copiarTexto(){
     
     navigator.clipboard.writeText(copiarResultado).then(() =>{
         textareaMensaje.value = '';
-        alert("Texto copiado con exito");
+        copyAprobado();
     })
 }
 
